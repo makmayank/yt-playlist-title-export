@@ -1,0 +1,15 @@
+
+
+//1.  First open the watch later or liked videos in a new page
+//2.  then inspect element
+//3.  with the help of inspector , select div containing list of videos shown on right beside the player
+//4.  now right click on div element in inspector and copy it's innerHTLML
+//5. open new tab , open inspect element , and delete everthing inside html tag
+//6. now paste the cotent that was copied in step 4
+//7. then run the folwig code in console
+x=document.querySelectorAll("[id='video-title']"); 
+videoList="";
+for(i=0;i<x.length;i++){
+    videoList= videoList+ x[i].getAttribute("aria-label")+"\n";
+}
+// after running above code , all the titles will be in videoList
